@@ -1,0 +1,10 @@
+{
+  "name": "Color Clash Party",
+  "short_name": "Color Clash",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#650612",
+  "theme_color": "#b20d22",
+  "description": "เกมการ์ดปาร์ตี้เปลี่ยนสีสำหรับมือถือและคอมพิวเตอร์",
+  "icons": []
+}
