@@ -1,0 +1,96 @@
+:root{
+  --bg:#650612;
+  --bg2:#b20d22;
+  --panel:#f7f7f7;
+  --ink:#20202a;
+  --red:#e52335;
+  --yellow:#f4cf22;
+  --green:#28a64a;
+  --blue:#2477df;
+  --shadow:0 14px 30px rgba(0,0,0,.28);
+}
+*{box-sizing:border-box}
+body{
+  margin:0; min-height:100vh; font-family:Arial,"Noto Sans Thai",sans-serif;
+  color:white; background:
+  radial-gradient(circle at 50% 35%,rgba(255,180,20,.24),transparent 28%),
+  radial-gradient(circle at 15% 80%,rgba(255,70,30,.2),transparent 28%),
+  linear-gradient(135deg,#5d0610,#b90d20 52%,#6b0713);
+}
+button,input{font:inherit}
+button{cursor:pointer}
+.app-shell{width:100%;min-height:100vh;overflow:hidden}
+.topbar{
+  height:72px;display:flex;align-items:center;justify-content:space-between;
+  padding:0 22px;background:rgba(40,0,5,.35);backdrop-filter:blur(10px);
+  position:sticky;top:0;z-index:5
+}
+.brand{display:flex;gap:10px;align-items:center}
+.brand-mark{
+  width:42px;height:42px;border-radius:13px;display:grid;place-items:center;
+  background:#fff;color:#bd1025;font-weight:900;transform:rotate(-8deg);
+  box-shadow:0 5px 14px #3a0006
+}
+.brand-title{font-weight:1000;letter-spacing:1.4px}.brand-subtitle{font-size:10px;opacity:.7;letter-spacing:2px}
+.icon-btn{border:0;background:rgba(255,255,255,.14);color:#fff;border-radius:12px;width:42px;height:42px;font-size:20px}
+.screen{display:none;min-height:calc(100vh - 72px);padding:30px 18px}
+.screen.active{display:block}
+.hero-card{
+  max-width:820px;margin:25px auto 0;min-height:590px;border-radius:38px;
+  position:relative;overflow:hidden;text-align:center;padding:60px 24px;
+  background:linear-gradient(150deg,#f31e31,#9d0617 58%,#61030b);
+  box-shadow:var(--shadow);border:1px solid rgba(255,255,255,.2)
+}
+.hero-card:after{content:"";position:absolute;inset:-20%;background:radial-gradient(circle,rgba(255,205,60,.45),transparent 22%);animation:pulse 3s infinite;pointer-events:none}
+@keyframes pulse{50%{transform:scale(1.3);opacity:.45}}
+.hero-card h1{position:relative;z-index:2;font-size:clamp(64px,12vw,125px);line-height:.76;margin:95px 0 25px;letter-spacing:-5px;text-shadow:6px 8px 0 #15151c}
+.hero-card h1 span{color:#f6d71e}
+.hero-card p{position:relative;z-index:2;font-weight:700;font-size:17px}
+.hero-card-stack{position:absolute;top:30px;right:28px;width:190px;height:120px}
+.mini-card{position:absolute;width:75px;height:108px;border:6px solid #fff;border-radius:12px;color:#fff;display:grid;place-items:center;font-size:35px;font-weight:1000;box-shadow:5px 8px 0 rgba(0,0,0,.25)}
+.mini-card:nth-child(1){transform:rotate(18deg);right:12px}.mini-card:nth-child(2){transform:rotate(-10deg);right:62px;top:10px}.mini-card:nth-child(3){transform:rotate(4deg);right:105px;top:25px}.mini-card:nth-child(4){transform:rotate(-22deg);right:135px;top:4px}
+.red{background:var(--red)}.yellow{background:var(--yellow);color:#171717}.green{background:var(--green)}.blue{background:var(--blue)}.black{background:#17171d}
+.menu-buttons{position:relative;z-index:2;display:grid;gap:12px;max-width:340px;margin:30px auto}
+.primary-btn,.secondary-btn,.text-btn{
+  border:0;border-radius:16px;padding:15px 20px;font-weight:900;transition:.2s
+}
+.primary-btn{background:#f6d71e;color:#3a1c00;box-shadow:0 6px 0 #a87500}
+.primary-btn:hover{transform:translateY(-2px)}
+.secondary-btn{background:#fff;color:#a60d20;box-shadow:0 6px 0 #bcbcbc}
+.text-btn{background:transparent;color:inherit}
+.feature-row{max-width:760px;margin:18px auto;display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.feature-row>div{background:rgba(255,255,255,.1);padding:14px;border-radius:17px;text-align:center}.feature-row b,.feature-row small{display:block}.feature-row small{opacity:.65;margin-top:4px}
+.panel{max-width:600px;margin:20px auto;background:rgba(255,255,255,.96);color:var(--ink);border-radius:28px;padding:30px;box-shadow:var(--shadow)}
+.panel-title{font-size:28px;font-weight:1000;color:#a90b20;margin-bottom:20px}
+.setup-panel label{font-weight:800;display:block;margin-bottom:8px}.setup-panel input{width:100%;padding:15px;border:2px solid #ddd;border-radius:14px;outline:0;margin-bottom:20px}.setup-panel input:focus{border-color:#b20d22}
+.rules-preview{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:25px}.rules-preview>div{background:#f4f4f4;border-radius:16px;padding:12px;text-align:center}.rules-preview span,.rules-preview b,.rules-preview small{display:block}.rules-preview span{font-size:24px}.rules-preview small{color:#777}
+.how-list{display:grid;gap:12px}.how-list>div{display:flex;gap:12px;align-items:flex-start;background:#f4f4f4;padding:12px;border-radius:14px}.how-list b{background:#b20d22;color:white;width:28px;height:28px;display:grid;place-items:center;border-radius:50%;flex:none}
+.special-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:20px 0}.special-grid>div{text-align:center}.rule-card{width:52px;height:74px;border:4px solid #fff;box-shadow:0 4px 8px #aaa;border-radius:9px;display:grid;place-items:center;margin:auto;font-weight:1000;color:white}.special-grid small{display:block;margin-top:8px;font-size:11px}
+.game-screen{padding:14px 14px 20px;max-width:1200px;margin:auto}
+.game-head{display:flex;justify-content:space-between;align-items:center}.match-label{font-size:11px;letter-spacing:2px;opacity:.7}.turn-label{font-size:20px;font-weight:1000}.head-actions{display:flex;gap:8px;align-items:center}.score-pill{background:rgba(255,255,255,.13);padding:9px 13px;border-radius:13px;font-weight:900}
+.opponents{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:15px auto;max-width:900px}.opponent{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.13);border-radius:16px;padding:9px;display:flex;align-items:center;gap:9px}.avatar{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;background:#fff;color:#8d0b1a;font-size:20px}.op-name{font-weight:900}.op-count{font-size:11px;opacity:.7}
+.table-area{min-height:280px;display:grid;place-items:center;align-content:center;gap:10px;position:relative}
+.deck-area{display:flex;align-items:center;justify-content:center;gap:28px}.deck,.card-slot{width:90px;height:126px;border-radius:13px;border:5px solid #fff;box-shadow:0 10px 22px rgba(0,0,0,.3)}
+.draw-pile{background:repeating-linear-gradient(45deg,#15151c 0 10px,#e91d32 10px 20px);color:#fff;display:grid;place-items:center;position:relative;transform:rotate(-3deg)}
+.draw-pile:after{content:"";position:absolute;inset:8px;border:2px solid #fff;border-radius:9px;transform:rotate(10deg)}.draw-pile span{font-weight:1000;font-size:24px;z-index:1}.draw-pile small{z-index:1}.draw-pile:disabled{opacity:.45;cursor:not-allowed}
+.card-slot{background:transparent;border:0;box-shadow:none;display:grid;place-items:center}
+.direction-badge{width:42px;height:42px;border-radius:50%;background:#fff;color:#b20d22;display:grid;place-items:center;font-size:22px;font-weight:1000}
+.current-color{font-size:12px;opacity:.8}.current-color span{display:inline-block;width:12px;height:12px;border-radius:50%;margin:0 5px}.current-color b{opacity:1}
+.game-message{background:rgba(0,0,0,.22);padding:8px 15px;border-radius:12px;font-size:13px;min-height:34px}
+.player-area{background:rgba(0,0,0,.15);border-radius:24px;padding:12px 10px 16px;max-width:1100px;margin:auto}
+.player-info{display:flex;justify-content:space-between;align-items:center;padding:0 5px 10px}.player-info>div{display:flex;gap:8px;align-items:center}.player-info span{font-size:11px;opacity:.65}
+.uno-btn{border:0;background:#ffdb1b;color:#201500;font-weight:1000;border-radius:50%;width:56px;height:56px;box-shadow:0 4px 0 #a87500;transform:rotate(-8deg)}.uno-btn:active{transform:rotate(-8deg) translateY(3px)}
+.hand{display:flex;justify-content:center;gap:6px;min-height:145px;align-items:flex-end;overflow-x:auto;padding:12px 4px 4px}
+.card{
+  width:82px;height:116px;flex:0 0 82px;border:5px solid #fff;border-radius:12px;
+  box-shadow:0 7px 12px rgba(0,0,0,.32);position:relative;color:#fff;font-weight:1000;
+  display:flex;align-items:center;justify-content:center;transition:.18s;user-select:none
+}
+.card:hover{transform:translateY(-14px) rotate(-2deg);z-index:2}.card .oval{width:60px;height:88px;border:3px solid rgba(255,255,255,.85);border-radius:50%;transform:rotate(-25deg);display:grid;place-items:center;font-size:27px;text-shadow:2px 2px 0 rgba(0,0,0,.4)}
+.card small{position:absolute;left:7px;top:5px;font-size:16px}.card small:last-child{left:auto;top:auto;right:7px;bottom:5px;transform:rotate(180deg)}
+.card.wild{background:#16161c}.card.wild .oval{background:conic-gradient(#e52335 0 25%,#f4cf22 25% 50%,#28a64a 50% 75%,#2477df 75%);color:white}
+.card.disabled{filter:grayscale(.65);opacity:.6;cursor:not-allowed}.card:not(.disabled){cursor:pointer}
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.7);display:grid;place-items:center;padding:20px;z-index:20}.hidden{display:none}.modal-box{width:min(500px,100%);background:#fff;color:#222;border-radius:26px;padding:28px;text-align:center;box-shadow:var(--shadow)}.modal-box h2{color:#a90b20;font-size:28px}.color-choice{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.choice{border:0;border-radius:15px;padding:17px;font-weight:1000;color:#fff}.choice.yellow{color:#222}.result-icon{font-size:70px}.result-score{background:#f3f3f3;border-radius:14px;padding:12px;margin:15px 0}.result-score b{font-size:22px;color:#b20d22}
+@media(max-width:700px){
+  .topbar{height:62px;padding:0 12px}.screen{min-height:calc(100vh - 62px);padding:14px 10px}.hero-card{min-height:560px;margin-top:5px;border-radius:28px;padding-top:45px}.hero-card h1{font-size:70px;margin-top:100px}.feature-row{grid-template-columns:1fr}.feature-row>div{display:flex;justify-content:center;gap:6px;align-items:center}.feature-row small{margin:0}.opponents{gap:6px}.opponent{padding:7px}.avatar{width:32px;height:32px}.op-name{font-size:12px}.op-count{font-size:9px}.deck,.card-slot{width:72px;height:104px}.table-area{min-height:245px}.hand{justify-content:flex-start}.card{width:70px;height:100px;flex-basis:70px}.card .oval{width:50px;height:74px;font-size:22px}.rules-preview{grid-template-columns:1fr}.special-grid{grid-template-columns:repeat(2,1fr)}.panel{padding:22px}
+}
