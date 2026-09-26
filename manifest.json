@@ -1,10 +1,26 @@
 {
   "name": "Color Clash Party",
   "short_name": "Color Clash",
+  "description": "เกมการ์ด Color Clash Party สำหรับเล่นบนมือถือและคอมพิวเตอร์",
   "start_url": "./index.html",
+  "scope": "./",
   "display": "standalone",
-  "background_color": "#650612",
-  "theme_color": "#b20d22",
-  "description": "เกมการ์ดปาร์ตี้เปลี่ยนสีสำหรับมือถือและคอมพิวเตอร์",
-  "icons": []
+  "orientation": "portrait",
+  "background_color": "#21040c",
+  "theme_color": "#7c1025",
+  "lang": "th",
+  "icons": [
+    {
+      "src": "android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
 }
